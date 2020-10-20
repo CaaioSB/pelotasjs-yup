@@ -1,12 +1,15 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 
-import Login from './pages/Login/Login'
+import Login from './pages/Login'
+import ForgotPassword from './pages/ForgotPassword'
 
 const Routes = () => {
   return (
     <Router>
-      <Route path="/" component={Login} />
+      <Route exact path="/" component={Login} />
+      <Route path="/forgotpassword" component={ForgotPassword} />
+      <Redirect to="/" />
     </Router>
   )
 }
