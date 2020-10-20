@@ -4,6 +4,7 @@ import Card from '../../components/Card/Card'
 import Wrapper from '../../components/Wrapper/Wrapper'
 import Input from '../../components/Input'
 import Button from '../../components/Button/Button'
+import LinkComponent from '../../components/Hyperlink'
 
 const SignUp = () => {
   return (
@@ -16,6 +17,7 @@ const SignUp = () => {
           <Input placeholder="Senha" />
           <Button mt={3} value="Cadastrar" />
         </Wrapper>
+        <LinkComponent mt={3} to="/" value="Já sou cadastrado" />
       </Card>
     </Container>
   )

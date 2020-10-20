@@ -22,7 +22,7 @@ const Login = () => {
           to="/forgotpassword"
           value="Esqueci minha senha"
         />
-        <LinkComponent mt={3} to="/forgotpassword" value="Cadastrar-se" />
+        <LinkComponent mt={3} to="/signup" value="Cadastrar-se" />
       </Card>
     </Container>
   )
