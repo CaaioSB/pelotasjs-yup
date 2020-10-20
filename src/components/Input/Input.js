@@ -22,7 +22,7 @@ const StyledInput = styled.input`
 `
 
 const Input = (props) => {
-  return <StyledInput {...props} />
+  return <StyledInput my={1} {...props} />
 }
 
 export default Input

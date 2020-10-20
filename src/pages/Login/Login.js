@@ -5,18 +5,24 @@ import Card from '../../components/Card'
 import Container from '../../components/Container'
 import Wrapper from '../../components/Wrapper'
 import Input from '../../components/Input'
-import LinkComponent from '../../components/Link'
+import LinkComponent from '../../components/Hyperlink'
 
 const Login = () => {
   return (
     <Container>
       <Card title="Login">
         <Wrapper>
-          <Input m={1} type="email" placeholder="Digite seu e-mail" />
-          <Input m={1} type="password" placeholder="Digite sua senha" />
+          <Input type="email" placeholder="Digite seu e-mail" />
+          <Input type="password" placeholder="Digite sua senha" />
           <Button my={3} type="submit" value="Entrar" />
         </Wrapper>
-        <LinkComponent to="/forgotpassword" value="Esqueci minha senha" />
+        <LinkComponent
+          fontSize={1}
+          mb={3}
+          to="/forgotpassword"
+          value="Esqueci minha senha"
+        />
+        <LinkComponent mt={3} to="/forgotpassword" value="Cadastrar-se" />
       </Card>
     </Container>
   )
