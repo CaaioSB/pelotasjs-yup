@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space, layout } from 'styled-system'
+import { space, layout, flexbox, typography } from 'styled-system'
 
 const StyledWrapper = styled.div`
   width: 250px;
@@ -11,6 +11,8 @@ const StyledWrapper = styled.div`
 
   ${space}
   ${layout}
+  ${flexbox}
+  ${typography}
 `
 
 const Wrapper = (props) => {
