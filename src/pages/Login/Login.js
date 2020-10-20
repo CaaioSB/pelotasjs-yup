@@ -5,7 +5,7 @@ import Card from '../../components/Card'
 import Container from '../../components/Container'
 import Wrapper from '../../components/Wrapper'
 import Input from '../../components/Input'
-import Link from '../../components/Link'
+import LinkComponent from '../../components/Link'
 
 const Login = () => {
   return (
@@ -14,9 +14,9 @@ const Login = () => {
         <Wrapper>
           <Input m={1} type="email" placeholder="Digite seu e-mail" />
           <Input m={1} type="password" placeholder="Digite sua senha" />
-          <Button m={3} type="submit" value="Entrar" />
+          <Button my={3} type="submit" value="Entrar" />
         </Wrapper>
-        <Link href="/" value="Esqueci minha senha" />
+        <LinkComponent to="/forgotpassword" value="Esqueci minha senha" />
       </Card>
     </Container>
   )
