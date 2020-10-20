@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { space } from 'styled-system'
 import PropTypes from 'prop-types'
 import { Link as RouterLink } from 'react-router-dom'
+import Wrapper from '../Wrapper/Wrapper'
 
 const StyledLink = styled(RouterLink)`
   color: #007bff;
@@ -17,13 +18,16 @@ const StyledLink = styled(RouterLink)`
   ${space}
 `
 
-const Link = ({ to, value }) => {
-  return <StyledLink to={to}>{value}</StyledLink>
-}
+const Hyperlink = (props) => (
+  <Wrapper {...props}>
+    <StyledLink to={props.to}>{props.value}</StyledLink>
+  </Wrapper>
+)
 
-export default Link
+export default Hyperlink
 
-Link.prototype = {
-  to: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+Hyperlink.protoType = {
+  to: PropTypes.string,
+  value: PropTypes.string,
+  props: PropTypes.node,
 }
