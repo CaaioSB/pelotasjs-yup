@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 
 import Login from './pages/Login'
+import SignUp from './pages/SignUp'
 import ForgotPassword from './pages/ForgotPassword'
 
 const Routes = () => {
@@ -9,7 +10,8 @@ const Routes = () => {
     <Router>
       <Route exact path="/" component={Login} />
       <Route path="/forgotpassword" component={ForgotPassword} />
-      <Redirect to="/" />
+      <Route path="/signup" component={SignUp} />
+      <Redirect to="/signup" />
     </Router>
   )
 }
