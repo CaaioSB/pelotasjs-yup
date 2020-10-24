@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from '@naveteam/saturn'
 import Routes from './routes'
 
 const GlobalStyle = createGlobalStyle`
@@ -20,8 +21,10 @@ const GlobalStyle = createGlobalStyle`
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <Routes />
+    <ThemeProvider>
+      <GlobalStyle />
+      <Routes />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
