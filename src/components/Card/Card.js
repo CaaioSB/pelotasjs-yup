@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import {layout} from 'styled-system'
 import PropTypes from 'prop-types'
 
 const StyledCard = styled.div`
   width: 400px;
-  height: 400px;
-  padding: 10px;
+  height: auto;
+  padding: 20px 10px;
 
   background: #ffffff;
   border-radius: 10px;
@@ -13,8 +14,11 @@ const StyledCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: height 0.2s;
 
   box-shadow: 11px 13px 15px -13px rgba(0, 0, 0, 0.32);
+
+  ${layout}
 `
 
 const HeaderTitle = styled.h3`
@@ -25,9 +29,9 @@ const HeaderTitle = styled.h3`
   text-align: center;
 `
 
-const Card = ({ children, title, props }) => {
+const Card = ({ children, title, height, props }) => {
   return (
-    <StyledCard {...props}>
+    <StyledCard height={height} {...props}>
       <HeaderTitle>{title}</HeaderTitle>
       {children}
     </StyledCard>
