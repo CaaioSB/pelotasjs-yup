@@ -1,68 +1,82 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+   <a href="https://img.shields.io/github/stars/CaaioSB/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/CaaioSB/pelotasjs-yup">
+  </a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+</p>
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### :rocket: Sobre o projeto
 
-### `yarn start`
+Este projeto foi desenvolvimento para realizar uma apresentação no evento Pelotas.JS da Nave.rs.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### :space_invader: Tecnologias
 
-### `yarn test`
+As seguintes ferramentas foram usadas na construção do projeto:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React][reactjs]
+- [yup][yup]
+- [React Hook Form][reacthookform]
+- [Saturn][naveteamsaturn]
+- [Styled System][styledsystem]
+- [styled-components][styledcomponents]
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### :computer: Manual
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Pré-requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Possuir o **[Git][git]** instalado e configurado no computador
+- Ter um gerenciador de pacotes seja o **[Yarn][yarn]** ou **[NPM][npm]**.
 
-### `yarn eject`
+#### Como executar
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 1. Clone o repositório
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Clone este repositório
+$ git clone https://github.com/CaaioSB/pelotasjs-yup
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### 2. Rodando a aplicação web
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd pelotasjs-yup
 
-## Learn More
+# Instale as dependências
+$ yarn
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+```
 
-### Code Splitting
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### :recycle: Este projeto não esta aberto pra contribuições
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### :page_with_curl: Licença
 
-### Making a Progressive Web App
+Este projeto esta sobe a licença MIT.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+---
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[yarn]: https://yarnpkg.com/
+[npm]: https://www.npmjs.com/
+[nodejs]: https://nodejs.org/
+[reactjs]: https://reactjs.org
+[styledsystem]: http://styled-system.com/
+[naveteamsaturn]: https://github.com/naveteam/saturn
+[reacthookform]: https://react-hook-form.com/
+[yup]: https://github.com/jquense/yup
+[styledcomponents]: https://styled-components.com/docs/basics
+[git]: https://git-scm.com/
+[license]: https://opensource.org/licenses/MIT
