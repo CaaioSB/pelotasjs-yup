@@ -1,32 +1,68 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { TextField, Button } from '@naveteam/saturn'
 
 import Container from '../../components/Container'
 import Card from '../../components/Card'
+import Column from '../../components/Column'
 import Wrapper from '../../components/Wrapper'
-import Input from '../../components/Input'
-import Button from '../../components/Button'
 import LinkComponent from '../../components/Hyperlink'
+import Small from '../../components/Small'
+import Toast from '../../components/Toast'
 
-const SmallLabel = styled.small`
-  padding: 3px 0;
-
-  font-size: 8pt;
-  color: #6c757d;
-`
+import { forgotSchema } from '../../schemas/forgotSchema'
 
 const ForgotPassword = () => {
+  const [data, setData] = useState({})
+
+  const { register, handleSubmit, errors, formState } = useForm({
+    validationSchema: forgotSchema,
+  })
+
+  const onSubmit = (data) => {
+    setData(data)
+  }
+
   return (
     <Container>
-      <Card title="Esqueci minha senha">
-        <Wrapper>
-          <Input placeholder="E-mail cadastrado" />
-          <SmallLabel>╶╴OU╶╴</SmallLabel>
-          <Input placeholder="CPF cadastrado" />
-          <Button my={3} value="Recuperar" />
-        </Wrapper>
-        <LinkComponent to="/" value="Realizar login" />
-      </Card>
+      <Column>
+        {formState.isSubmitted && (
+          <Toast data={JSON.stringify(data, null, 4)} />
+        )}
+        <Card title="Esqueci minha senha">
+          <Wrapper>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <TextField
+                ref={register}
+                width={1}
+                mb={15}
+                name="email"
+                type="email"
+                label="E-mail"
+                error={!!errors.email}
+                message={errors.email?.message}
+                placeholder="example@example.com"
+                color="gray.800"
+              />
+              <Small>╶╴OU╶╴</Small>
+              <TextField
+                ref={register}
+                width={1}
+                mb={15}
+                name="cpf"
+                type="text"
+                label="CPF"
+                error={!!errors.cpf}
+                message={errors.cpf?.message}
+                placeholder="___.___.___-__"
+                color="gray.800"
+              />
+              <Button my={3}>Recuperar</Button>
+            </form>
+          </Wrapper>
+          <LinkComponent mt={3} to="/" value="Realizar login" />
+        </Card>
+      </Column>
     </Container>
   )
 }
